@@ -1,0 +1,9 @@
+.container {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 15px;
+}
+
+.container ol {
+    text-align: left;
+}
