@@ -14,7 +14,7 @@ class App extends React.Component {
     try {
       const response = await api.get('/categories');
       if (response.status !== 200) {
-        throw "request not found";
+        console.log('error code')
       }
       this.setState({ categories: response.data });
     } catch (e) {
@@ -44,7 +44,7 @@ class App extends React.Component {
 
       );
       if (response.status !== 200) {
-        throw "request not found";
+        throw new Error('request not found');
       }
       const joke = { value: response.data.value, icon: response.data.icon_url };
       this.setState({ joke: joke });
